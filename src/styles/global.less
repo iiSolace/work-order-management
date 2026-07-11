@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'PingFang SC', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(29, 122, 252, 0.18), transparent 28%),
+    linear-gradient(135deg, #eef5ff 0%, #f8fbff 52%, #eef2f7 100%);
+  color: #14213d;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login-page,
+.home-page {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-panel {
+  width: min(460px, 100%);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: 0 30px 80px rgba(34, 72, 126, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.login-panel__eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #1677ff;
+  margin-bottom: 10px;
+}
+
+.login-panel h1,
+.section-title,
+.home-page__title {
+  margin: 0 0 12px;
+}
+
+.home-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.home-page__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home-page__subtitle {
+  color: #5b6b82;
+}
+
+.home-page__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(320px, 1fr);
+  gap: 24px;
+}
+
+.home-page__table {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 18px 45px rgba(31, 56, 88, 0.08);
+}
+
+@media (max-width: 960px) {
+  .home-page__content {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page,
+  .login-page {
+    padding: 20px;
+  }
+
+  .home-page__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
